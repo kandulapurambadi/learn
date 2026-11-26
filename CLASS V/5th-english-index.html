@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ఇంగ్లీష్ - 5వ తరగతి - కందులాపురం బడి</title>
+
+<!-- Anek Telugu Font -->
+<link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html{
+  -webkit-text-size-adjust:100%;
+}
+
+/* Body */
+body{
+  background:#E6F2FF;
+  color:#0B3C5D;
+  font-family:'Anek Telugu',sans-serif;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* Header */
+header{
+  text-align:center;
+  padding:clamp(20px,5vw,30px) 16px;
+  background:linear-gradient(135deg,#0B3C5D,#145DA0);
+  color:white;
+}
+
+.school-name{
+  font-size:clamp(1.7rem,6vw,2.4rem);
+  font-weight:700;
+  line-height:1.2;
+}
+
+.subtitle{
+  font-size:clamp(1rem,3.5vw,1.2rem);
+}
+
+/* Welcome */
+.welcome-title{
+  text-align:center;
+  font-size:clamp(1.4rem,5vw,2.2rem);
+  margin:clamp(18px,4vw,30px) 0;
+}
+
+/* Back link — large touch target */
+.back-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  margin-top:16px;
+  color:white;
+  text-decoration:none;
+  font-size:clamp(1rem,3.5vw,1.1rem);
+  border:2px solid rgba(255,255,255,0.6);
+  padding:10px 20px;
+  border-radius:30px;
+  transition:.3s;
+}
+
+.back-link:hover,
+.back-link:focus{
+  background:rgba(255,255,255,0.15);
+  transform:scale(1.05);
+  outline:none;
+}
+
+/* Container */
+.container{
+  width:100%;
+  max-width:1200px;
+  margin:auto;
+  padding:clamp(14px,4vw,20px);
+  flex:1;
+}
+
+/* Section title */
+.section-title{
+  text-align:center;
+  font-size:clamp(1.4rem,5vw,2rem);
+  margin:clamp(25px,5vw,40px) 0 clamp(18px,4vw,25px);
+  line-height:1.3;
+}
+
+/* 🔥 LESSON LINKS — single column on phones, grid on wider screens */
+.lesson-links{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:clamp(14px,3.5vw,24px);
+}
+
+.lesson-link{
+  background:linear-gradient(135deg,#145DA0,#1E81B0);
+  color:white;
+  text-decoration:none;
+  padding:clamp(20px,5vw,30px) 20px;
+  border-radius:18px;
+  text-align:left;
+  transition:.3s;
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
+  min-height:100px;
+  display:flex;
+  align-items:center;
+  gap:clamp(14px,4vw,20px);
+}
+
+.lesson-link:hover,
+.lesson-link:focus{
+  transform:scale(1.02);
+  outline:none;
+}
+
+/* Disable heavy zoom on touch devices to avoid layout jump */
+@media(hover:none){
+  .lesson-link:hover,
+  .lesson-link:focus{
+    transform:none;
+  }
+}
+
+/* Number badge */
+.lesson-number{
+  flex-shrink:0;
+  width:clamp(44px,12vw,54px);
+  height:clamp(44px,12vw,54px);
+  border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  border:2px solid rgba(255,255,255,0.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:clamp(1.2rem,4.5vw,1.5rem);
+  font-weight:700;
+}
+
+/* Lesson text block */
+.lesson-text{
+  flex:1;
+  min-width:0;
+}
+
+.lesson-title{
+  font-size:clamp(1.15rem,4.5vw,1.5rem);
+  font-weight:600;
+  line-height:1.3;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+}
+
+.lesson-arrow{
+  flex-shrink:0;
+  font-size:clamp(1.2rem,4vw,1.4rem);
+  opacity:.7;
+}
+
+/* Footer */
+footer{
+  margin-top:clamp(30px,6vw,50px);
+  background:#0B3C5D;
+  color:white;
+  text-align:center;
+  padding:clamp(16px,4vw,20px);
+  font-size:clamp(0.9rem,3.5vw,1rem);
+}
+
+footer p{
+  margin:4px 0;
+}
+
+/* Tablet & up: switch to multi-column grid */
+@media(min-width:600px){
+  .lesson-links{
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  }
+}
+
+@media(min-width:1000px){
+  .lesson-links{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <h1 class="school-name">కందులాపురం బడి</h1>
+  <p class="subtitle">KANDULAPURAM BADI - The Good Source of Education</p>
+  <h2 class="welcome-title">ఇంగ్లీష్ | English — 5వ తరగతి</h2>
+
+  <a href="5th-class.html" class="back-link">← 5వ తరగతికి తిరిగి వెళ్లండి | Back to Class V</a>
+
+</header>
+
+<div class="container">
+
+<!-- LESSON LINKS -->
+<h2 class="section-title">మీ పాఠాన్ని ఎంచుకోండి</h2>
+
+<div class="lesson-links">
+
+<!-- 1. Mallika Goes to School! -->
+<a href="5th-english-01-mallika-goes-to-school.html" class="lesson-link">
+<div class="lesson-number">1</div>
+<div class="lesson-text">
+<div class="lesson-title">Mallika Goes to School!</div>
+</div>
+<div class="lesson-arrow">→</div>
+</a>
+
+<!-- 2. My Sweet Memories -->
+<a href="5th-english-02-my-sweet-memories.html" class="lesson-link">
+<div class="lesson-number">2</div>
+<div class="lesson-text">
+<div class="lesson-title">My Sweet Memories</div>
+</div>
+<div class="lesson-arrow">→</div>
+</a>
+
+<!-- 3. The Necklace -->
+<a href="5th-english-03-the-necklace.html" class="lesson-link">
+<div class="lesson-number">3</div>
+<div class="lesson-text">
+<div class="lesson-title">The Necklace</div>
+</div>
+<div class="lesson-arrow">→</div>
+</a>
+
+<!-- 4. Kalam with Children -->
+<a href="5th-english-04-kalam-with-children.html" class="lesson-link">
+<div class="lesson-number">4</div>
+<div class="lesson-text">
+<div class="lesson-title">Kalam with Children</div>
+</div>
+<div class="lesson-arrow">→</div>
+</a>
+
+<!-- 5. The Wondrous Women -->
+<a href="5th-english-05-the-wondrous-women.html" class="lesson-link">
+<div class="lesson-number">5</div>
+<div class="lesson-text">
+<div class="lesson-title">The Wondrous Women</div>
+</div>
+<div class="lesson-arrow">→</div>
+</a>
+
+<!-- 6. The Wise Judgement -->
+<a href="5th-english-06-the-wise-judgement.html" class="lesson-link">
+<div class="lesson-number">6</div>
+<div class="lesson-text">
+<div class="lesson-title">The Wise Judgement</div>
+</div>
+<div class="lesson-arrow">→</div>
+</a>
+
+<!-- 7. Kabaddi... Kabaddi... Kabaddi... -->
+<a href="5th-english-07-kabaddi-kabaddi-kabaddi.html" class="lesson-link">
+<div class="lesson-number">7</div>
+<div class="lesson-text">
+<div class="lesson-title">Kabaddi... Kabaddi... Kabaddi...</div>
+</div>
+<div class="lesson-arrow">→</div>
+</a>
+
+<!-- 8. A Birthday Letter -->
+<a href="5th-english-08-a-birthday-letter.html" class="lesson-link">
+<div class="lesson-number">8</div>
+<div class="lesson-text">
+<div class="lesson-title">A Birthday Letter</div>
+</div>
+<div class="lesson-arrow">→</div>
+</a>
+
+</div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <p class="footer-text">కందులాపురం బడి - విద్యా ప్రగతికి నిరంతరం కృషి చేస్తున్నాము</p>
+  <p class="footer-text">Kandulapuram Badi - Striving Continuously for Educational Progress</p>
+  <p class="copyright">© 2026 కందులాపురం బడి. అన్ని హక్కులు ప్రత్యేకించబడినవి</p>
+</footer>
+
+</body>
+</html>
